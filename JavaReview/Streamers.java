@@ -1,9 +1,9 @@
-package Java;
+package JavaReview;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class Streams {
+public class Streamers {
     public static void main(String[] args) {
         // Example of using streams in Java
         List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David");
