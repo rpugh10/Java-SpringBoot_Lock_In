@@ -43,10 +43,17 @@ public class Streamers {
         //     .forEach(even -> System.out.println(even));
 
         //Squaring every number
+        // List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+        // nums.stream()
+        //     .map(square -> square * square)
+        //     .forEach(square -> System.out.println(square));
+
         List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
-        nums.stream()
-            .map(square -> square * square)
-            .forEach(square -> System.out.println(square));
+        // System.out.println(nums.stream().reduce(0, (sum, n) -> sum + n));
+        //.reduce(initialValue, (accumulator, current) -> ...) combines all the elements of a stream into a single result
+
+            
+            
 
     }
 }
