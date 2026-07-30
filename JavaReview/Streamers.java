@@ -5,12 +5,13 @@ import java.util.List;
 
 public class Streamers {
     public static void main(String[] args) {
-        // Example of using streams in Java
-        List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David");
+        //Printing out names
+        // List<String> names = Arrays.asList("Ryan", "Justin", "Tom", "Alice", "Al");
+        // names.stream()
+        //     .forEach(name -> System.out.println(name));
 
-        // Using stream to filter and print names starting with 'A'
+        List<String> names = Arrays.asList("Ryan", "Justin", "Tom", "Alice", "Al");
         names.stream()
-             .filter(name -> name.startsWith("A"))
-             .forEach(System.out::println);
+            .forEach(name -> System.out.println(name));
     }
 }
