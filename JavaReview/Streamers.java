@@ -37,9 +37,16 @@ public class Streamers {
         //     .forEach(name -> System.out.println(name));
 
         //Printing only even numbers
+        //List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+        // nums.stream()
+        //     .filter(even -> even % 2 == 0)
+        //     .forEach(even -> System.out.println(even));
+
+        //Squaring every number
         List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
         nums.stream()
-            .filter(even -> even % 2 == 0)
-            .forEach(even -> System.out.println(even));
+            .map(square -> square * square)
+            .forEach(square -> System.out.println(square));
+
     }
 }
