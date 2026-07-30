@@ -48,9 +48,13 @@ public class Streamers {
         //     .map(square -> square * square)
         //     .forEach(square -> System.out.println(square));
 
-        List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+        //List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
         // System.out.println(nums.stream().reduce(0, (sum, n) -> sum + n));
         //.reduce(initialValue, (accumulator, current) -> ...) combines all the elements of a stream into a single result
+
+        //Finding the max value in a stream
+         List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10); 
+            System.out.println(nums.stream().reduce(0, (max, current) -> Math.max(max, current)));
 
             
             
