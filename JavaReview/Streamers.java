@@ -65,11 +65,16 @@ public class Streamers {
             // System.out.println(evenNums);
             
             //Removing Duplicates
-            List<Integer> nums = Arrays.asList(1,2,2,3,4,4,5,5,5);
-            List<Integer> dup = nums.stream()
-                .distinct() //removes duplicates from a stream
-                .toList();
-            System.out.println(dup);
+            // List<Integer> nums = Arrays.asList(1,2,2,3,4,4,5,5,5);
+            // List<Integer> dup = nums.stream()
+            //     .distinct() //removes duplicates from a stream
+            //     .toList();
+            // System.out.println(dup);
+
+            List<String> name = Arrays.asList("Char", "Bob", "Alice");
+            name.stream()
+                .sorted() //returns a new stream with the elements in order
+                .forEach(n -> System.out.println(n));
                                     
 
     }
