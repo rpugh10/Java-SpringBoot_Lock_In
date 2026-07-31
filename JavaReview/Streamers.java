@@ -50,12 +50,19 @@ public class Streamers {
 
         //List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
         // System.out.println(nums.stream().reduce(0, (sum, n) -> sum + n));
-        //.reduce(initialValue, (accumulator, current) -> ...) combines all the elements of a stream into a single result
+        //.reduce(initialValue, (accumulator, current) -> ...) combines all the elements of a stream into a single result (reduce is like a loop that goes through all the elements of a stream and combines them into a single result)
 
         //Finding the max value in a stream
-         List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10); 
-            System.out.println(nums.stream().reduce(0, (max, current) -> Math.max(max, current)));
+         //List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10); 
+            // System.out.println(nums.stream().reduce(0, (max, current) -> Math.max(max, current)));
 
+        
+        // Collecting the even numbers into a new list
+            List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10); 
+            List<Integer> evenNums = nums.stream()
+                .filter(even -> even % 2 == 0)
+                .toList(); // Collects the filtered elements into a new list
+            System.out.println(evenNums);
             
             
 
