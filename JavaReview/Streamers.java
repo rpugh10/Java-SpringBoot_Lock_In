@@ -81,7 +81,7 @@ public class Streamers {
             //Printing elements in descending order
             List<Integer> nums = Arrays.asList(4, 2, 1, 5, 6, 3, 10);
             List<Integer> sorted = nums.stream()   
-                .sorted(Comparator.reverseOrder())
+                .sorted(Comparator.reverseOrder()) //Comparator is an object that tells java how to compare two objects
                 .toList();
             System.out.println(sorted);
                                     
