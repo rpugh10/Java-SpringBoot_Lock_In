@@ -1,6 +1,7 @@
 package JavaReview;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class Streamers {
@@ -80,7 +81,7 @@ public class Streamers {
             //Printing elements in descending order
             List<Integer> nums = Arrays.asList(4, 2, 1, 5, 6, 3, 10);
             List<Integer> sorted = nums.stream()   
-                .sorted()
+                .sorted(Comparator.reverseOrder())
                 .toList();
             System.out.println(sorted);
                                     
