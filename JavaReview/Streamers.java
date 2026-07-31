@@ -58,13 +58,19 @@ public class Streamers {
 
         
         // Collecting the even numbers into a new list
-            List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10); 
-            List<Integer> evenNums = nums.stream()
-                .filter(even -> even % 2 == 0)
-                .toList(); // Collects the filtered elements into a new list
-            System.out.println(evenNums);
+            // List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10); 
+            // List<Integer> evenNums = nums.stream()
+            //     .filter(even -> even % 2 == 0)
+            //     .toList(); // Collects the filtered elements into a new list
+            // System.out.println(evenNums);
             
-            
+            //Removing Duplicates
+            List<Integer> nums = Arrays.asList(1,2,2,3,4,4,5,5,5);
+            List<Integer> dup = nums.stream()
+                .distinct() //removes duplicates from a stream
+                .toList();
+            System.out.println(dup);
+                                    
 
     }
 }
