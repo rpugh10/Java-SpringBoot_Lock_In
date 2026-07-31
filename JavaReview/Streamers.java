@@ -71,10 +71,18 @@ public class Streamers {
             //     .toList();
             // System.out.println(dup);
 
-            List<String> name = Arrays.asList("Char", "Bob", "Alice");
-            name.stream()
-                .sorted() //returns a new stream with the elements in order
-                .forEach(n -> System.out.println(n));
+            //Sorting a stream
+            // List<String> name = Arrays.asList("Char", "Bob", "Alice");
+            // name.stream()
+            //     .sorted() //returns a new stream with the elements in order
+            //     .forEach(n -> System.out.println(n));
+
+            //Printing elements in descending order
+            List<Integer> nums = Arrays.asList(4, 2, 1, 5, 6, 3, 10);
+            List<Integer> sorted = nums.stream()   
+                .sorted()
+                .toList();
+            System.out.println(sorted);
                                     
 
     }
