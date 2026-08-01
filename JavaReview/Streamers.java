@@ -93,9 +93,15 @@ public class Streamers {
                 new Employee("David",28,65000)
             );
 
-            employees.stream()
-                .map(e -> e.getName()) //Want to transform an employee Object into a String
-                .forEach(e -> System.out.println(e));
+            
+            //Printing their names
+            // employees.stream()
+            //     .map(e -> e.getName()) //Want to transform an employee Object into a String
+            //     .forEach(e -> System.out.println(e));
+
+            employees.stream() 
+                .filter(e -> e.getSalary() > 0)
+                .forEach(e -> System.out.println(e.getSalary()));
                                     
 
     }
