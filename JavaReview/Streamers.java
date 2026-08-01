@@ -1,7 +1,6 @@
 package JavaReview;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 public class Streamers {
@@ -79,11 +78,24 @@ public class Streamers {
             //     .forEach(n -> System.out.println(n));
 
             //Printing elements in descending order
-            List<Integer> nums = Arrays.asList(4, 2, 1, 5, 6, 3, 10);
-            List<Integer> sorted = nums.stream()   
-                .sorted(Comparator.reverseOrder()) //Comparator is an object that tells java how to compare two objects
-                .toList();
-            System.out.println(sorted);
+            // List<Integer> nums = Arrays.asList(4, 2, 1, 5, 6, 3, 10);
+            // List<Integer> sorted = nums.stream()   
+            //     .sorted(Comparator.reverseOrder()) //Comparator is an object that tells java how to compare two objects
+            //     .toList();
+            // System.out.println(sorted);
+
+            
+            
+            List<Employee> employees = Arrays.asList(
+                new Employee("Alice",25,50000),
+                new Employee("Bob",32,70000),
+                new Employee("Charlie",40,90000),
+                new Employee("David",28,65000)
+            );
+
+            employees.stream()
+                .map(e -> e.getName()) //Want to transform an employee Object into a String
+                .forEach(e -> System.out.println(e));
                                     
 
     }
