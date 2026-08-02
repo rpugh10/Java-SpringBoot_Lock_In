@@ -105,11 +105,17 @@ public class Streamers {
 
             
             //Printing the average salary of employees
-            double averageSalary = employees.stream()
-                .mapToDouble(e -> e.getSalary()) //Converts the stream of Employee objects into a stream of double values representing their salaries
-                .average() //Calculates the average of the double values in the stream
-                .orElse(0.0); //Returns 0.0 if the stream is empty (no employees)
-                System.out.println("Average Salary: " + averageSalary);
+            // double averageSalary = employees.stream()
+            //     .mapToDouble(e -> e.getSalary()) //Converts the stream of Employee objects into a stream of double values representing their salaries
+            //     .average() //Calculates the average of the double values in the stream
+            //     .orElse(0.0); //Returns 0.0 if the stream is empty (no employees)
+            //     System.out.println("Average Salary: " + averageSalary);
+
+            //Printing name of highest paid employee
+            Employee highestPaid = employees.stream()
+                .max((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary())) //Compares two Employee objects based on their salaries and returns the one with the higher salary
+                .orElse(null); //Returns null if the stream is empty (no employees)
+                System.out.println("Highest Paid Employee: " + highestPaid.getName());
 
                 
                                     
