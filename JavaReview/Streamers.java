@@ -99,9 +99,19 @@ public class Streamers {
             //     .map(e -> e.getName()) //Want to transform an employee Object into a String
             //     .forEach(e -> System.out.println(e));
 
-            employees.stream() 
-                .filter(e -> e.getSalary() > 0)
-                .forEach(e -> System.out.println(e.getSalary()));
+            // employees.stream() 
+            //     .filter(e -> e.getSalary() > 0)
+            //     .forEach(e -> System.out.println(e.getSalary()));
+
+            
+            //Printing the average salary of employees
+            double averageSalary = employees.stream()
+                .mapToDouble(e -> e.getSalary()) //Converts the stream of Employee objects into a stream of double values representing their salaries
+                .average() //Calculates the average of the double values in the stream
+                .orElse(0.0); //Returns 0.0 if the stream is empty (no employees)
+                System.out.println("Average Salary: " + averageSalary);
+
+                
                                     
 
     }
