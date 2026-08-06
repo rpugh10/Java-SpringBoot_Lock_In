@@ -112,10 +112,17 @@ public class Streamers {
             //     System.out.println("Average Salary: " + averageSalary);
 
             //Printing name of highest paid employee
-            Employee highestPaid = employees.stream()
-                .max((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary())) //Compares two Employee objects based on their salaries and returns the one with the higher salary
-                .orElse(null); //Returns null if the stream is empty (no employees)
-                System.out.println("Highest Paid Employee: " + highestPaid.getName());
+            // Employee highestPaid = employees.stream()
+            //     .max((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary())) //Compares two Employee objects based on their salaries and returns the one with the higher salary
+            //     .orElse(null); //Returns null if the stream is empty (no employees)
+            //     System.out.println("Highest Paid Employee: " + highestPaid.getName());
+
+            //Sorting employees by salary
+            List<Employee> sortedEmployees = employees.stream()
+                .sorted((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary())) //Sorts the Employee objects in ascending order based on their salaries
+                .toList(); //Collects the sorted Employee objects into a new list
+
+                sortedEmployees.forEach(e -> System.out.println(e.getName() + ": " + e.getSalary()));
 
                 
                                     
