@@ -126,10 +126,17 @@ public class Streamers {
 
             //Collecting Employee names
 
-            List<String> names = employees.stream()
-                .map(n -> n.getName())
-                .toList();
-            System.out.println(names);
+            // List<String> names = employees.stream()
+            //     .map(n -> n.getName()) //n represents 1 element from the stream
+            //     .toList();
+            // System.out.println(names);
+
+            //Counting the names beginning with A
+            long count = employees.stream()
+                .filter(e -> e.getName().startsWith("A")) //Filters the Employee objects to include only those whose names start with "A"
+                .count(); //Counts the number of elements in the filtered stream
+                System.out.println("Number of Employees with names starting with A: " + count);
+                
 
                 
                                     
