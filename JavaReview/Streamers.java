@@ -132,10 +132,17 @@ public class Streamers {
             // System.out.println(names);
 
             //Counting the names beginning with A
-            long count = employees.stream()
-                .filter(e -> e.getName().startsWith("A")) //Filters the Employee objects to include only those whose names start with "A"
-                .count(); //Counts the number of elements in the filtered stream
-                System.out.println("Number of Employees with names starting with A: " + count);
+            // long count = employees.stream()
+            //     .filter(e -> e.getName().startsWith("A")) //Filters the Employee objects to include only those whose names start with "A"
+            //     .count(); //Counts the number of elements in the filtered stream
+            //     System.out.println("Number of Employees with names starting with A: " + count);
+
+            //First name longer than 5 characters
+            Employee firstLongName = employees.stream()
+                .filter(e -> e.getName().length() > 5) //Filters the Employee objects to include only those whose names are longer than 5 characters
+                .findFirst() //Returns an Optional containing the first element of the filtered stream, if present
+                .orElse(null); //Returns null if the stream is empty (no matching employees)
+                System.out.println("First Employee with name longer than 5 characters: " + (firstLongName != null ? firstLongName.getName() : "None"));
                 
 
                 
