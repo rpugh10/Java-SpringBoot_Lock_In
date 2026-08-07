@@ -118,11 +118,18 @@ public class Streamers {
             //     System.out.println("Highest Paid Employee: " + highestPaid.getName());
 
             //Sorting employees by salary
-            List<Employee> sortedEmployees = employees.stream()
-                .sorted((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary())) //Sorts the Employee objects in ascending order based on their salaries
-                .toList(); //Collects the sorted Employee objects into a new list
+            // List<Employee> sortedEmployees = employees.stream()
+            //     .sorted((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary())) //Sorts the Employee objects in ascending order based on their salaries
+            //     .toList(); //Collects the sorted Employee objects into a new list
 
-                sortedEmployees.forEach(e -> System.out.println(e.getName() + ": " + e.getSalary()));
+            //     sortedEmployees.forEach(e -> System.out.println(e.getName() + ": " + e.getSalary()));
+
+            //Collecting Employee names
+
+            List<String> names = employees.stream()
+                .map(n -> n.getName())
+                .toList();
+            System.out.println(names);
 
                 
                                     
